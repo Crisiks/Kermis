@@ -8,7 +8,7 @@ public class Spiegelpaleis extends Attractie{
 		kaartjesverkocht[0] = 0;
 	}
 	
-	void spiegelpaleisOproepen(Spiegelpaleis spp1, Kassa kassa1) {
+	void spiegelpaleisOproepen(Spiegelpaleis spp1, Kassa kassa1) throws Exception {
 		System.out.println(spp1.naam + " laat iedereen hun ware ik zien! Wat wil je weten?" + "\n" + "[v]erkoop een kaartje, [k]aantal kaartjes verkocht, [o]omzet, [t]terug naar hoofdmenu.");
 		char c = scanner.next().charAt(0);
 		switch (c) {
@@ -34,7 +34,7 @@ public class Spiegelpaleis extends Attractie{
 		}		
 	}
 	
-	void terugNaarSubmenu(Spiegelpaleis spp1, Kassa kassa1) {
+	void terugNaarSubmenu(Spiegelpaleis spp1, Kassa kassa1) throws Exception {
 		spiegelpaleisOproepen(spp1, kassa1);
 	}
 }

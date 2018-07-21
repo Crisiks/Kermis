@@ -12,7 +12,7 @@ public class Kassa {
 	Ladderklimmen l1 = new Ladderklimmen("Summit: the Mount Everest experience", 5.00, 3, 0);
 	Belastinginspecteur bi1 = new Belastinginspecteur();
 	
-	void attractieOproepen(Kassa kassa1) {	
+	void attractieOproepen(Kassa kassa1) throws Exception {	
 		System.out.println("Wat wil je oproepen?" + "\n" + "[1]Botsautos, [2]Spin, [3]Spiegelpaleis, [4]Spookhuis," + "\n" + "[5]Hawaii, [6]Ladderklimmen, [7]Kermis als geheel.");
 		int gekozenNummer = scanner.nextInt();
 		System.out.println(gekozenNummer);
@@ -44,7 +44,7 @@ public class Kassa {
 		}
 	}
 	
-	void kermisOproepen(Kassa kassa1, Botsautos b1, Spin sp1, Spiegelpaleis spp1, Spookhuis spk1, Hawaii h1, Ladderklimmen l1, Belastinginspecteur bi1) {
+	void kermisOproepen(Kassa kassa1, Botsautos b1, Spin sp1, Spiegelpaleis spp1, Spookhuis spk1, Hawaii h1, Ladderklimmen l1, Belastinginspecteur bi1) throws Exception {
 		System.out.println("De kermis draait overuren! Wat wil je weten?" + "\n" + "[k]:totale aantal kaartjes verkocht, [o]totale omzet, [b]elastinginspectie, [t] terug naar hoofdmenu.");
 		char c = scanner.next().charAt(0);
 		double[] omzetKermis = new double [1];

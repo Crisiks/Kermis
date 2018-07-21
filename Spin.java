@@ -1,23 +1,25 @@
 package kermis;
 
 
-public class Spin extends RisicoRijkeAttractie{
+public class Spin extends RisicoRijkeAttractie {
 	Spin (String deNaam, double dePrijs, int deOppervlakte, int i, int hetDraailimiet) {
 		naam = deNaam;
 		prijs = dePrijs;
 		oppervlakte = deOppervlakte;
 		kaartjesverkocht[0] = i;
-		draailimiet = hetDraailimiet;
+		draailimiet[0] = hetDraailimiet;
 	}
 	
-	void spinOproepen(Spin sp1, Kassa kassa1) {
-		opstellingsKeuring(sp1);
+	void spinOproepen(Spin sp1, Kassa kassa1) throws Exception {
+		opstellingsKeuring(sp1, kassa1);
 		System.out.println(sp1.naam + " blaast iedereen van zijn sokken! Wat wil je weten?" + "\n" + "[v]erkoop een kaartje, [k]aantal kaartjes verkocht, [o]omzet, [t]terug naar hoofdmenu.");
 		char c = scanner.next().charAt(0);
 		switch (c) {
 			case 'v':
 				sp1.kaartjesverkocht[0]++;
 				sp1.aantalKeerGedraaid[0]++;
+				System.out.println(sp1.aantalKeerGedraaid[0]);
+				System.out.println(sp1.draailimiet[0]);
 				terugNaarSubmenu(sp1, kassa1);
 				break;
 			case 'k':
@@ -43,7 +45,7 @@ public class Spin extends RisicoRijkeAttractie{
 		}		
 	}
 	
-	void terugNaarSubmenu(Spin sp1, Kassa kassa1) {
+	void terugNaarSubmenu(Spin sp1, Kassa kassa1) throws Exception {
 		spinOproepen(sp1, kassa1);
 	}
 }

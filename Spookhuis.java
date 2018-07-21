@@ -8,7 +8,7 @@ public class Spookhuis extends Attractie{
 		kaartjesverkocht[0] = i;
 	}
 
-void spookhuisOproepen(Spookhuis spk1, Kassa kassa1) {
+void spookhuisOproepen(Spookhuis spk1, Kassa kassa1) throws Exception {
 	System.out.println(spk1.naam + " jaagt al honderden de stuipen op het lijf! Wat wil je weten?" + "\n" + "[v]erkoop een kaartje, [k]aantal kaartjes verkocht, [o]omzet, [t]terug naar hoofdmenu.");
 	char c = scanner.next().charAt(0);
 	switch (c) {
@@ -34,7 +34,7 @@ void spookhuisOproepen(Spookhuis spk1, Kassa kassa1) {
 		}		
 	}
 
-void terugNaarSubmenu(Spookhuis spk1, Kassa kassa1) {
+void terugNaarSubmenu(Spookhuis spk1, Kassa kassa1) throws Exception {
 	spookhuisOproepen(spk1, kassa1);
 	}
 }

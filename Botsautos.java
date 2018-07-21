@@ -9,7 +9,7 @@ public class Botsautos extends Attractie {
 		kaartjesverkocht[0] = 0;
 	}
 	
-	void botsautosOproepen(Botsautos b1, Kassa kassa1) {
+	void botsautosOproepen(Botsautos b1, Kassa kassa1) throws Exception {
 		System.out.println(b1.naam + " gaat helemaal los! Wat wil je weten?" + "\n" + "[v]erkoop een kaartje, [k]aantal kaartjes verkocht, [o]omzet, [t]terug naar hoofdmenu.");
 		char c = scanner.next().charAt(0);
 		switch (c) {
@@ -35,7 +35,7 @@ public class Botsautos extends Attractie {
 		}		
 	}
 	
-	void terugNaarSubmenu(Botsautos b1, Kassa kassa1) {
+	void terugNaarSubmenu(Botsautos b1, Kassa kassa1) throws Exception {
 		botsautosOproepen(b1, kassa1);
 	}
 }

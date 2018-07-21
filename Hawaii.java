@@ -6,11 +6,11 @@ class Hawaii extends RisicoRijkeAttractie{
 		prijs = dePrijs;
 		oppervlakte = deOppervlakte;
 		kaartjesverkocht[0] = i;
-		draailimiet = hetDraailimiet;
+		draailimiet[0] = hetDraailimiet;
 	}
 
-	void hawaiiOproepen(Hawaii h1, Kassa kassa1) {
-		opstellingsKeuring(h1);
+	void hawaiiOproepen(Hawaii h1, Kassa kassa1) throws Exception {
+		opstellingsKeuring(h1, kassa1);
 		System.out.println(h1.naam + " gaat vliegensvlug de hoogte in! Wat wil je weten?" + "\n" + "[v]erkoop een kaartje, [k]aantal kaartjes verkocht, [o]omzet, [t]terug naar hoofdmenu.");
 		char c = scanner.next().charAt(0);
 		switch (c) {
@@ -42,7 +42,7 @@ class Hawaii extends RisicoRijkeAttractie{
 			}		
 		}
 	
-	void terugNaarSubmenu(Hawaii h1, Kassa kassa1) {
+	void terugNaarSubmenu(Hawaii h1, Kassa kassa1) throws Exception {
 		hawaiiOproepen(h1, kassa1);
 		}
 }

@@ -10,7 +10,7 @@ public class Ladderklimmen extends Attractie implements GokAttractie{
 	double [] omzetLadderklimmen = new double[1];
 	
 	
-	void ladderklimmenOproepen(Ladderklimmen l1, Kassa kassa1, Belastinginspecteur bi1) {
+	void ladderklimmenOproepen(Ladderklimmen l1, Kassa kassa1, Belastinginspecteur bi1) throws Exception {
 		System.out.println(l1.naam + " heeft al veel bezoekers uitgedaagd! Wat wil je weten?" + "\n" + "[v]erkoop een kaartje, [k]aantal kaartjes verkocht, [o]omzet, [t]terug naar hoofdmenu.");
 		char c = scanner.next().charAt(0);
 		switch (c) {
@@ -42,7 +42,7 @@ public class Ladderklimmen extends Attractie implements GokAttractie{
 			}		
 		}
 	
-	void terugNaarSubmenu(Ladderklimmen l1, Kassa kassa1, Belastinginspecteur bi1) {
+	void terugNaarSubmenu(Ladderklimmen l1, Kassa kassa1, Belastinginspecteur bi1) throws Exception {
 		ladderklimmenOproepen(l1, kassa1, bi1);
 	}
 }
