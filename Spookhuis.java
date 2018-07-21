@@ -17,7 +17,7 @@ void spookhuisOproepen(Spookhuis spk1, Kassa kassa1) {
 			terugNaarSubmenu(spk1, kassa1);
 			break;
 		case 'k':
-			System.out.println("Er zijn al " + spk1.kaartjesverkocht + " kaartjes verkocht.");
+			System.out.println("Er zijn al " + spk1.kaartjesverkocht[0] + " kaartjes verkocht.");
 			terugNaarSubmenu(spk1, kassa1);
 			break;
 		case 'o':
@@ -27,6 +27,7 @@ void spookhuisOproepen(Spookhuis spk1, Kassa kassa1) {
 			break;
 		case 't':
 			kassa1.attractieOproepen(kassa1);
+			break;
 		default:
 			System.out.println("Dat is geen geldige keuze.");
 			terugNaarSubmenu(spk1, kassa1);

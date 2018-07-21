@@ -28,6 +28,7 @@ public class Botsautos extends Attractie {
 				break;
 			case 't':
 				kassa1.attractieOproepen(kassa1);
+				break;
 			default:
 				System.out.println("Dat is geen geldige keuze.");
 				terugNaarSubmenu(b1, kassa1);

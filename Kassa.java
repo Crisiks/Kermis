@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Kassa {
 	Scanner scanner = new Scanner(System.in);
 	Botsautos b1 = new Botsautos("2Fast2Furious: Overdrive", 2.50, 100, 0);
-	Spin sp1 = new Spin("TwistR", 2.25, 75, 0);
+	Spin sp1 = new Spin("TwistR", 2.25, 75, 0, 5);
 	Spiegelpaleis spp1 = new Spiegelpaleis("DoppleGangLand", 2.25, 75, 0);
 	Spookhuis spk1 = new Spookhuis("Haunted House on the Hill: the Reckoning", 3.20, 125, 0);
-	Hawaii h1 = new Hawaii("Apollo 13: Deep Impact", 2.90, 20, 0);
+	Hawaii h1 = new Hawaii("Apollo 13: Deep Impact", 2.90, 20, 0, 10);
 	Ladderklimmen l1 = new Ladderklimmen("Summit: the Mount Everest experience", 5.00, 3, 0);
 	
 	void attractieOproepen(Kassa kassa1) {	
@@ -38,7 +38,8 @@ public class Kassa {
 				kermisOproepen(kassa1, b1, sp1, spp1, spk1, h1, l1);
 				break;
 			default:
-				System.out.println("Dat is geen geldige keuze.");		
+				System.out.println("Dat is geen geldige keuze.");
+				attractieOproepen(kassa1);
 		}
 	}
 	
@@ -48,8 +49,8 @@ public class Kassa {
 		switch (c) {
 			case 'k':
 				int[] totaalAantalKaartjes = new int[1];
-				totaalAantalKaartjes[1] = b1.kaartjesverkocht[0] + sp1.kaartjesverkocht[0] + spp1.kaartjesverkocht[0] + spk1.kaartjesverkocht[0] + h1.kaartjesverkocht[0] + l1.kaartjesverkocht[0]; 
-				System.out.println("Er zijn al " + totaalAantalKaartjes + " kaartjes verkocht.");
+				totaalAantalKaartjes[0] = b1.kaartjesverkocht[0] + sp1.kaartjesverkocht[0] + spp1.kaartjesverkocht[0] + spk1.kaartjesverkocht[0] + h1.kaartjesverkocht[0] + l1.kaartjesverkocht[0]; 
+				System.out.println("Er zijn al " + totaalAantalKaartjes[0] + " kaartjes verkocht.");
 				attractieOproepen(kassa1);
 				break;
 			case 'o':

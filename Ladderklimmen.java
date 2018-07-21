@@ -17,7 +17,7 @@ public class Ladderklimmen extends Attractie{
 				terugNaarSubmenu(l1, kassa1);
 				break;
 			case 'k':
-				System.out.println("Er zijn al " + l1.kaartjesverkocht + " kaartjes verkocht.");
+				System.out.println("Er zijn al " + l1.kaartjesverkocht[0] + " kaartjes verkocht.");
 				terugNaarSubmenu(l1, kassa1);
 				break;
 			case 'o':
@@ -27,6 +27,7 @@ public class Ladderklimmen extends Attractie{
 				break;
 			case 't':
 				kassa1.attractieOproepen(kassa1);
+				break;
 			default:
 				System.out.println("Dat is geen geldige keuze.");
 				terugNaarSubmenu(l1, kassa1);
