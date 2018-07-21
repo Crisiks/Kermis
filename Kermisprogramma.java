@@ -1,15 +1,14 @@
 //functionaliteit toevoegen: omzet altijd met twee getallen achter de komma
-//functionaliteit toevoegen: terug naar het hoofdmenu
 //gebruik geen double voor de prijs, maar reken in centen en deel dit later door 100
-//functionaliteit: aan het begin een uitleg
 //functionaliteit toevoegen: daadwerkelijk kaartjes verkopen
+//functionaliteit: [o]omzet naar [o]mzet
 
 package kermis;
 
 class Kermisprogramma {
 
 	public static void main(String[] args) {
-		Kassamedewerker kassamedewerker1 = new Kassamedewerker("P.T. Barnum");
-		kassamedewerker1.attractieOproepen();
+		Kassa kassa1 = new Kassa();
+		kassa1.attractieOproepen(kassa1);
 	}
 }

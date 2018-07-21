@@ -8,5 +8,5 @@ public abstract class Attractie {
 	String naam;
 	double prijs;
 	int oppervlakte;
-	int kaartjesverkocht;
+	int [] kaartjesverkocht = new int[1];
 }
