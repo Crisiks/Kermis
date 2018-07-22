@@ -11,7 +11,7 @@ public class Ladderklimmen extends Attractie implements GokAttractie{
 	
 	
 	void ladderklimmenOproepen(Ladderklimmen l1, Kassa kassa1, Belastinginspecteur bi1) throws Exception {
-		System.out.println(l1.naam + " heeft al veel bezoekers uitgedaagd! Wat wil je weten?" + "\n" + "[v]erkoop een kaartje, [k]aantal kaartjes verkocht, [o]omzet, [t]terug naar hoofdmenu.");
+		System.out.println(l1.naam + " heeft al veel bezoekers uitgedaagd! Wat wil je doen?" + "\n" + "[v]erkoop een kaartje, aantal [k]aartjes verkocht oproepen, [o]mzet oproepen, [t]erug naar hoofdmenu.");
 		char c = scanner.next().charAt(0);
 		switch (c) {
 			case 'v':
@@ -25,10 +25,10 @@ public class Ladderklimmen extends Attractie implements GokAttractie{
 				terugNaarSubmenu(l1, kassa1, bi1);
 				break;
 			case 'o':
-				System.out.println("Er is al €" + omzetLadderklimmen[0] + " omzet gedraaid.");	
+				System.out.println("Er is al €" + omzetLadderklimmen[0]/100 + " omzet gedraaid.");	
 				System.out.print("Daarvoor is €");
 				if((belastinguitomzet[0] - bi1.bedragVoorBelasting[0]) > 0) {
-					System.out.println((belastinguitomzet[0] - bi1.bedragVoorBelasting[0]) + " gereserveerd voor de belasting.");
+					System.out.println((belastinguitomzet[0] - bi1.bedragVoorBelasting[0])/100 + " gereserveerd voor de belasting.");
 				}else {System.out.println("0 gereserveerd voor de belasting.");				
 				}
 				terugNaarSubmenu(l1, kassa1, bi1);

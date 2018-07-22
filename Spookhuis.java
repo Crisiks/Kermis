@@ -9,7 +9,7 @@ public class Spookhuis extends Attractie{
 	}
 
 void spookhuisOproepen(Spookhuis spk1, Kassa kassa1) throws Exception {
-	System.out.println(spk1.naam + " jaagt al honderden de stuipen op het lijf! Wat wil je weten?" + "\n" + "[v]erkoop een kaartje, [k]aantal kaartjes verkocht, [o]omzet, [t]terug naar hoofdmenu.");
+	System.out.println(spk1.naam + " jaagt al honderden de stuipen op het lijf! Wat wil je doen?" + "\n" + "[v]erkoop een kaartje, aantal [k]aartjes verkocht oproepen, [o]mzet oproepen, [t]erug naar hoofdmenu.");
 	char c = scanner.next().charAt(0);
 	switch (c) {
 		case 'v':
@@ -22,7 +22,7 @@ void spookhuisOproepen(Spookhuis spk1, Kassa kassa1) throws Exception {
 			break;
 		case 'o':
 			double omzetSpookhuis = spk1.kaartjesverkocht[0] * spk1.prijs;
-			System.out.println("Er is al €" + omzetSpookhuis + " omzet gedraaid.");
+			System.out.println("Er is al €" + omzetSpookhuis/100 + " omzet gedraaid.");
 			terugNaarSubmenu(spk1, kassa1);
 			break;
 		case 't':

@@ -9,7 +9,7 @@ public class Spiegelpaleis extends Attractie{
 	}
 	
 	void spiegelpaleisOproepen(Spiegelpaleis spp1, Kassa kassa1) throws Exception {
-		System.out.println(spp1.naam + " laat iedereen hun ware ik zien! Wat wil je weten?" + "\n" + "[v]erkoop een kaartje, [k]aantal kaartjes verkocht, [o]omzet, [t]terug naar hoofdmenu.");
+		System.out.println(spp1.naam + " laat iedereen hun ware ik zien! Wat wil je doen?" + "\n" + "[v]erkoop een kaartje, aantal [k]aartjes verkocht oproepen, [o]mzet oproepen, [t]erug naar hoofdmenu.");
 		char c = scanner.next().charAt(0);
 		switch (c) {
 			case 'v':
@@ -22,7 +22,7 @@ public class Spiegelpaleis extends Attractie{
 				break;
 			case 'o':
 				double omzetSpiegelpaleis = spp1.kaartjesverkocht[0] * spp1.prijs;
-				System.out.println("Er is al €" + omzetSpiegelpaleis + " omzet gedraaid.");
+				System.out.println("Er is al €" + omzetSpiegelpaleis/100 + " omzet gedraaid.");
 				terugNaarSubmenu(spp1, kassa1);
 				break;
 			case 't':

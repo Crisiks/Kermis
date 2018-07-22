@@ -10,7 +10,7 @@ public class Botsautos extends Attractie {
 	}
 	
 	void botsautosOproepen(Botsautos b1, Kassa kassa1) throws Exception {
-		System.out.println(b1.naam + " gaat helemaal los! Wat wil je weten?" + "\n" + "[v]erkoop een kaartje, [k]aantal kaartjes verkocht, [o]omzet, [t]terug naar hoofdmenu.");
+		System.out.println(b1.naam + " gaat helemaal los! Wat wil je doen?" + "\n" + "[v]erkoop een kaartje, aantal [k]aartjes verkocht oproepen, [o]mzet oproepen, [t]erug naar hoofdmenu.");
 		char c = scanner.next().charAt(0);
 		switch (c) {
 			case 'v':
@@ -23,7 +23,7 @@ public class Botsautos extends Attractie {
 				break;
 			case 'o':
 				double omzetBotsautos = b1.kaartjesverkocht[0] * b1.prijs;
-				System.out.println("Er is al €" + omzetBotsautos + " omzet gedraaid.");
+				System.out.println("Er is al €" + omzetBotsautos/100 + " omzet gedraaid.");
 				terugNaarSubmenu(b1, kassa1);
 				break;
 			case 't':

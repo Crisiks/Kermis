@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 public class Kassa {
 	Scanner scanner = new Scanner(System.in);
-	Botsautos b1 = new Botsautos("2Fast2Furious: Overdrive", 2.50, 100, 0);
-	Spin sp1 = new Spin("TwistR", 2.25, 75, 0, 5);
-	Spiegelpaleis spp1 = new Spiegelpaleis("DoppleGangLand", 2.25, 75, 0);
-	Spookhuis spk1 = new Spookhuis("Haunted House on the Hill: the Reckoning", 3.20, 125, 0);
-	Hawaii h1 = new Hawaii("Apollo 13: Deep Impact", 2.90, 20, 0, 10);
-	Ladderklimmen l1 = new Ladderklimmen("Summit: the Mount Everest experience", 5.00, 3, 0);
+	Botsautos b1 = new Botsautos("2Fast2Furious: Overdrive", 250, 100, 0);
+	Spin sp1 = new Spin("TwistR", 225, 75, 0, 5);
+	Spiegelpaleis spp1 = new Spiegelpaleis("DoppleGangLand", 225, 75, 0);
+	Spookhuis spk1 = new Spookhuis("Haunted House on the Hill: the Reckoning", 320, 125, 0);
+	Hawaii h1 = new Hawaii("Apollo 13: Deep Impact", 290, 20, 0, 10);
+	Ladderklimmen l1 = new Ladderklimmen("Summit: the Mount Everest experience", 500, 3, 0);
 	Belastinginspecteur bi1 = new Belastinginspecteur();
 	
 	void attractieOproepen(Kassa kassa1) throws Exception {	
 		System.out.println("Wat wil je oproepen?" + "\n" + "[1]Botsautos, [2]Spin, [3]Spiegelpaleis, [4]Spookhuis," + "\n" + "[5]Hawaii, [6]Ladderklimmen, [7]Kermis als geheel.");
 		int gekozenNummer = scanner.nextInt();
-		System.out.println(gekozenNummer);
+		//System.out.println(gekozenNummer);
 		switch (gekozenNummer) {
 			case 1:
 				b1.botsautosOproepen(b1, kassa1);
@@ -45,7 +45,7 @@ public class Kassa {
 	}
 	
 	void kermisOproepen(Kassa kassa1, Botsautos b1, Spin sp1, Spiegelpaleis spp1, Spookhuis spk1, Hawaii h1, Ladderklimmen l1, Belastinginspecteur bi1) throws Exception {
-		System.out.println("De kermis draait overuren! Wat wil je weten?" + "\n" + "[k]:totale aantal kaartjes verkocht, [o]totale omzet, [b]elastinginspectie, [t] terug naar hoofdmenu.");
+		System.out.println("De kermis draait overuren! Wat wil je doen?" + "\n" + "aantal [k]aartjes verkocht zien, totale [o]mzet zien, [b]elastinginspectie aanroepen, [t]erug naar hoofdmenu.");
 		char c = scanner.next().charAt(0);
 		double[] omzetKermis = new double [1];
 		omzetKermis[0] = (b1.kaartjesverkocht[0] * b1.prijs) + (sp1.kaartjesverkocht[0] * sp1.prijs) + (spp1.kaartjesverkocht[0] * spp1.prijs) + (spk1.kaartjesverkocht[0] * spk1.prijs) + (h1.kaartjesverkocht[0] * h1.prijs) + l1.omzetLadderklimmen[0] - bi1.bedragVoorBelasting[0];
@@ -57,7 +57,7 @@ public class Kassa {
 				attractieOproepen(kassa1);
 				break;
 			case 'o':
-				System.out.println("Er is al €" + omzetKermis[0] + " omzet gedraaid." + "\n" + "Daarvan is €" + l1.belastinguitomzet[0] + " gereserveerd voor de belasting.");
+				System.out.println("Er is al €" + omzetKermis[0]/100 + " omzet gedraaid." + "\n" + "Hiervan is €" + l1.belastinguitomzet[0]/100 + " gereserveerd voor de belasting.");
 				attractieOproepen(kassa1);
 				break;
 			case 'b':

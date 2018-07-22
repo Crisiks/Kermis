@@ -11,7 +11,7 @@ class Hawaii extends RisicoRijkeAttractie{
 
 	void hawaiiOproepen(Hawaii h1, Kassa kassa1) throws Exception {
 		opstellingsKeuring(h1, kassa1);
-		System.out.println(h1.naam + " gaat vliegensvlug de hoogte in! Wat wil je weten?" + "\n" + "[v]erkoop een kaartje, [k]aantal kaartjes verkocht, [o]omzet, [t]terug naar hoofdmenu.");
+		System.out.println(h1.naam + " gaat vliegensvlug de hoogte in! Wat wil je doen?" + "\n" + "[v]erkoop een kaartje, aantal [k]aartjes verkocht oproepen, [o]mzet oproepen, [t]erug naar hoofdmenu.");
 		char c = scanner.next().charAt(0);
 		switch (c) {
 			case 'v':
@@ -25,17 +25,17 @@ class Hawaii extends RisicoRijkeAttractie{
 				break;
 			case 'o':
 				double omzetHawaii = h1.kaartjesverkocht[0] * h1.prijs;
-				System.out.println("Er is al €" + omzetHawaii + " omzet gedraaid.");
+				System.out.println("Er is al €" + omzetHawaii/100 + " omzet gedraaid.");
 				terugNaarSubmenu(h1, kassa1);
 				break;
 			case 't':
 				kassa1.attractieOproepen(kassa1);
 				break;
-			case 'm':
-				h1.aantalKeerGedraaid[0] = 0;
-				System.out.println(h1.naam + " is goedgekeurd door de monteur!");
-				terugNaarSubmenu(h1, kassa1);
-				break;
+//			case 'm':
+//				h1.aantalKeerGedraaid[0] = 0;
+//				System.out.println(h1.naam + " is goedgekeurd door de monteur!");
+//				terugNaarSubmenu(h1, kassa1);
+//				break;
 			default:
 				System.out.println("Dat is geen geldige keuze.");
 				terugNaarSubmenu(h1, kassa1);
